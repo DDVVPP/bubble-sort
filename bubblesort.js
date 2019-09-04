@@ -31,11 +31,23 @@ const swap = (num1, num2) => {
 };
 
 const bubbleSort = arr => {
-  for (let j = 0; j < arr.length; j++) {
+  for (let j = 0; j < arr.length - 1; j++) {
     let currentSwap = swap(arr[j], arr[j + 1]);
     console.log(`current swap: ${currentSwap}`);
     arr.splice(j, 2, currentSwap[0], currentSwap[1]);
   }
+
   console.log(`array in BS: [${arr}]     `);
   return arr;
 };
+
+// const bubbleSort = arr => {
+//   for (let j = arr.length - 1; j > 0; j--) {
+//     let currentSwap = swap(arr[j - 1], arr[j]);
+//     console.log(`current swap: ${currentSwap}`);
+//     arr.splice(j - 1, 2, currentSwap[0], currentSwap[1]);
+//   }
+
+//   console.log(`array in BS: [${arr}]     `);
+//   return arr;
+// };
